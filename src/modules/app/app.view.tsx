@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/App.scss'
+import '../../assets/app.scss'
 
 const App: React.FC = () => {
   return <div>hello</div>
