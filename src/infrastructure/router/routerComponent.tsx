@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import App from '../../modules/app/app.view'
 import About from '../../modules/app/components/about'
 import Home from '../../modules/app/components/home'
