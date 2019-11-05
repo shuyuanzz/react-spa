@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 import sideListConfig from '../../conf/sideListConf'
+import { Link } from 'react-router-dom'
 export default class Framework extends React.Component {
 	render() {
 		const { Header, Sider, Content } = Layout
@@ -9,7 +10,9 @@ export default class Framework extends React.Component {
 		return (
 			<Layout>
 				<Header className="header">
-					<div className="logo" />
+					<div className="logo">
+						<Link to="/">logo</Link>
+					</div>
 				</Header>
 				<Layout>
 					<Sider width={200} style={{ background: '#fff' }}>
@@ -19,49 +22,27 @@ export default class Framework extends React.Component {
 							defaultOpenKeys={['sub1']}
 							style={{ height: '100%', borderRight: 0 }}
 						>
-							{sideListConfig}
-							<SubMenu
-								key="sub1"
-								title={
-									<span>
-										<Icon type="user" />
-										subnav 1
-									</span>
-								}
-							>
-								<Menu.Item key="1">option1</Menu.Item>
-								<Menu.Item key="2">option2</Menu.Item>
-								<Menu.Item key="3">option3</Menu.Item>
-								<Menu.Item key="4">option4</Menu.Item>
-							</SubMenu>
-							<SubMenu
-								key="sub2"
-								title={
-									<span>
-										<Icon type="laptop" />
-										subnav 2
-									</span>
-								}
-							>
-								<Menu.Item key="5">option5</Menu.Item>
-								<Menu.Item key="6">option6</Menu.Item>
-								<Menu.Item key="7">option7</Menu.Item>
-								<Menu.Item key="8">option8</Menu.Item>
-							</SubMenu>
-							<SubMenu
-								key="sub3"
-								title={
-									<span>
-										<Icon type="notification" />
-										subnav 3
-									</span>
-								}
-							>
-								<Menu.Item key="9">option9</Menu.Item>
-								<Menu.Item key="10">option10</Menu.Item>
-								<Menu.Item key="11">option11</Menu.Item>
-								<Menu.Item key="12">option12</Menu.Item>
-							</SubMenu>
+							{sideListConfig.map((mainList) => {
+								return (
+									<SubMenu
+										key={mainList.name}
+										title={
+											<span>
+												<Icon type="user" />
+												{mainList.name}
+											</span>
+										}
+									>
+										{mainList.subList.map((subList) => {
+											return (
+												<Menu.Item key={subList.name}>
+													<Link to={subList.path}>{subList.name}</Link>
+												</Menu.Item>
+											)
+										})}
+									</SubMenu>
+								)
+							})}
 						</Menu>
 					</Sider>
 					<Layout style={{ padding: '0 24px 24px' }}>
