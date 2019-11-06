@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'mobx-react'
-import StateConstructor from '../interface/stateConstructor'
+import { StateConstructor } from '../interface/stateConstructor'
 export default function mobxProvider(state: StateConstructor) {
 	const initialState = new state()
 	return (Comp: any): any => {

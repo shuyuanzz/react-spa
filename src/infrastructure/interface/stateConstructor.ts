@@ -1,4 +1,4 @@
 import BaseState from '../states/base.state'
-export default interface StateConstructor {
+export interface StateConstructor {
 	new (): BaseState
 }
