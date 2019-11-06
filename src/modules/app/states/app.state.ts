@@ -18,7 +18,11 @@ export default class Appstate extends BaseState {
 	getData() {
 		httpClient
 			.fetch('home')
-			.then((data) => console.log('data:', data))
+			.then((data) => {
+				if (data) {
+					this.testData = data as any
+				}
+			})
 			.catch((error) => console.error('err:', error))
 	}
 }

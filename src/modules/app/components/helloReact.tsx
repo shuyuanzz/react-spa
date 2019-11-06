@@ -13,6 +13,8 @@ export default class HelloReact extends React.Component<any, any> {
 		return (
 			<div>
 				<Button type="primary">{store.test}</Button>
+				<h1>{store.testData.title}</h1>
+				<h3>{store.testData.message}</h3>
 			</div>
 		)
 	}
