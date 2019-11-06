@@ -7,7 +7,7 @@ const sideListConfig: {
 		subList: [
 			{ name: 'about', path: '/about' },
 			{ name: 'home', path: '/home' },
-			{ name: 'user', path: 'user' }
+			{ name: 'user', path: '/user' }
 		]
 	},
 	{
@@ -15,7 +15,7 @@ const sideListConfig: {
 		subList: [
 			{ name: 'about', path: '/about' },
 			{ name: 'home', path: '/home' },
-			{ name: 'user', path: 'user' }
+			{ name: 'user', path: '/user' }
 		]
 	},
 	{
@@ -23,7 +23,7 @@ const sideListConfig: {
 		subList: [
 			{ name: 'about', path: '/about' },
 			{ name: 'home', path: '/home' },
-			{ name: 'user', path: 'user' }
+			{ name: 'user', path: '/user' }
 		]
 	},
 	{
@@ -31,8 +31,16 @@ const sideListConfig: {
 		subList: [
 			{ name: 'about', path: '/about' },
 			{ name: 'home', path: '/home' },
-			{ name: 'user', path: 'user' }
+			{ name: 'user', path: '/user' }
 		]
 	}
 ]
 export default sideListConfig
+
+export const breadcrumbNameMap: {
+	[name: string]: string
+} = {
+	'/about': 'about',
+	'/home': 'home',
+	'/user': 'user'
+}
