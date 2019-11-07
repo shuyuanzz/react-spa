@@ -1,10 +1,13 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button } from 'antd'
-
+import Appstate from '../states/app.state'
+interface Iprops {
+	store?: Appstate
+}
 @inject('store')
 @observer
-export default class HelloReact extends React.Component<any, any> {
+export default class HelloReact extends React.Component<Iprops, any> {
 	componentDidMount() {
 		this.props.store.getData()
 	}

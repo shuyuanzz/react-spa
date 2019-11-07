@@ -1,6 +1,6 @@
 import { ServiceConfg } from '../../infrastructure/interface/serviceConfig'
 import serviceConfg, { BASE_URL, TIME_OUT } from '../../conf/restServiceConf'
-import Axios, { AxiosInstance } from 'axios'
+import Axios, { AxiosInstance, AxiosPromise } from 'axios'
 class HttpClient {
 	public http: AxiosInstance
 	private serviceConfig: ServiceConfg
@@ -14,7 +14,7 @@ class HttpClient {
 		})
 		this.serviceConfig = serviceConf
 	}
-	public fetch(routeName: string, config?: any) {
+	public fetch<T>(routeName: string, config?: any): AxiosPromise<T> {
 		const currentRoute = this.serviceConfig[routeName]
 		if (!currentRoute) throw new Error('Enter a wrong router name')
 		return this.http({
