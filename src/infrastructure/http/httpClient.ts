@@ -1,6 +1,7 @@
 import { ServiceConfg } from '../../infrastructure/interface/serviceConfig'
 import serviceConfg, { BASE_URL, TIME_OUT } from '../../conf/restServiceConf'
 import Axios, { AxiosInstance, AxiosPromise } from 'axios'
+import { message } from 'antd'
 class HttpClient {
 	public http: AxiosInstance
 	private serviceConfig: ServiceConfg
@@ -12,6 +13,14 @@ class HttpClient {
 				'Content-type': 'application/json'
 			}
 		})
+		this.http.interceptors.response.use(
+			(res) => {
+				return res
+			},
+			(err) => {
+				message.error(err.message)
+			}
+		)
 		this.serviceConfig = serviceConf
 	}
 	public fetch<T>(routeName: string, config?: any): AxiosPromise<T> {
