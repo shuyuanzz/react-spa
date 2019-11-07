@@ -1,8 +1,8 @@
-import { ServiceConfg } from '../../infrastructure/interface/serviceConfig'
+import { ServiceConfg } from '../../infrastructure/interface/commonInterface'
 import serviceConfg, { BASE_URL, TIME_OUT } from '../../conf/restServiceConf'
 import Axios, { AxiosInstance, AxiosPromise } from 'axios'
 import { message } from 'antd'
-class HttpClient {
+export class HttpClient {
 	public http: AxiosInstance
 	private serviceConfig: ServiceConfg
 	constructor(serviceConf: ServiceConfg) {

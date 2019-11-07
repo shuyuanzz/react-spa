@@ -1,6 +1,5 @@
 import BaseState from '../../../../../infrastructure/states/base.state'
 import { observable, action } from 'mobx'
-import httpClient from '../../../../../infrastructure/http/httpClient'
 export default class Appstate extends BaseState {
 	@observable public testData: {
 		title: string
@@ -16,7 +15,7 @@ export default class Appstate extends BaseState {
 	}
 	@action.bound
 	getData() {
-		httpClient
+		this.httpClient
 			.fetch<{
 				title: string
 				message: string
