@@ -7,7 +7,7 @@ interface Iprops {
 }
 @inject('store')
 @observer
-export default class HelloReact extends React.Component<Iprops, any> {
+export default class HelloReact extends React.Component<Iprops, {}> {
 	componentDidMount() {
 		this.props.store.getData()
 	}

@@ -20,6 +20,7 @@
 		"react-dom": "^16.11.0",
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.2.0",
+		"ts-optchain": "^0.1.8",
 		"typescript": "3.6.4"
 	},
 	"scripts": {
