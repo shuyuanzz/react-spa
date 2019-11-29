@@ -10,8 +10,7 @@ export class HttpClient {
 			baseURL: BASE_URL,
 			timeout: TIME_OUT,
 			headers: {
-				'Content-type': 'application/json',
-				accept: 'application/json'
+				'Content-type': 'application/json'
 			}
 		})
 		this.http.interceptors.response.use(
