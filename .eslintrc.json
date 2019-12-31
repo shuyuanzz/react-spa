@@ -1,7 +1,8 @@
 {
 	"parser": "@typescript-eslint/parser",
-	"extends": [                //使用推荐的代码监测规范
-		"prettier/@typescript-eslint",
+	"extends": [              
+		"plugin:@typescript-eslint/recommended",  //使用推荐的代码监测规范
+		"react-app",
 		"plugin:prettier/recommended"
 	], 
 	"plugins": [
