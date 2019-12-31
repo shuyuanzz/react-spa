@@ -8,6 +8,9 @@
 
 `Create React App`是 FaceBook 的 React 团队官方出的一个构建 React 单页面应用的脚手架工具。它本身集成了 Webpack，并配置了一系列内置的 loader 和默认的 npm 的脚本，可以很轻松的实现零配置就可以快速开发 React 的应用。这样可以省去一些繁琐的配置流程，其最基础默认功能也基本满足我们的项目需求，也提供了许多扩展功能，可以根据具体需求去做一些引入。
 
+## why TypeScript
+[为什么要使用TypeScript](https://juejin.im/post/5d19b0305188254e2e4e78e8)
+
 ## 项目代码规范风格统一
 
 本项目使用 `Eslint + Prettier + husky + lint-staged `提高前端项目质量、统一项目代码风格:
@@ -57,4 +60,4 @@
 
 1. prettier 是一个能够统一团队编码风格的工具，能够极大的提高团队执行效率，统一的编码风格能很好的保证代码的可读性。
 
-## why react-router & mobx
+## why mobx
