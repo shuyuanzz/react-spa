@@ -51,4 +51,16 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 对于Typescript项目的编码规范而言，主要有两种选择ESLint和TSLint。ESLint不仅能规范js代码，通过配置解析器，也能规范TS代码。此外由于性能问题，TypeScript 官方决定全面采用ESLint，甚至把仓库作为测试平台，而 ESLint 的 TypeScript 解析器也成为独立项目，专注解决双方兼容性问题。
 
+## 项目代码规范风格统一
+
+本项目使用 `Eslint + Prettier + husky + lint-staged `提高前端项目质量、统一项目代码风格:
+
+`Eslint` 代码检查，编辑器启用 Eslint 之后，不符合规范的会自动进行提示。  
+
+`Prettier` 让代码变得更 pretty，会更改不符合检测要求的代码，自动格式化。    
+
+`husky`  git 每步操作的钩子，每执行一个操作都会执行一次对应的钩子函数，执行 pre-commit 操作时，执行 Prettier 格式化脚本，即可自动的格式化代码，让 commit 之后的代码都符合 Prettier规范。  
+
+`lint-staged` lint-staged 就是用来只对变更的文件进行处理的。
+
 ## why react-router & mobx

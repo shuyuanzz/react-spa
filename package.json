@@ -15,8 +15,14 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn lint:fix"
+			"pre-commit": "lint-staged"
 		}
+	},
+	"lint-staged": {
+		"*.{.ts,.tsx}": [
+			"eslint",
+			"git add"
+		]
 	},
 	"browserslist": {
 		"production": [
@@ -41,6 +47,7 @@
 		"babel-plugin-import": "^1.12.2",
 		"customize-cra": "^0.8.0",
 		"eslint-plugin-prettier": "^3.1.2",
+		"lint-staged": "^9.5.0",
 		"mobx": "^5.14.2",
 		"mobx-react": "^6.1.4",
 		"node-sass": "4.13.0",
