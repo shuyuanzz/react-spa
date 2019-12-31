@@ -10,13 +10,12 @@ interface Iprops {
 @observer
 export default class HelloReact extends React.Component<Iprops, {}> {
 	componentDidMount() {
-		const { store } = this.props
-		store.getData()
+		this.props.store.getData()
 	}
 
 	render() {
-		     const { store } = this.props
-		     return (
+		const { store } = this.props
+		return (
 			<div>
 				<Button type="primary">{store.test}</Button>
 				<h1>{store.testData.title}</h1>
