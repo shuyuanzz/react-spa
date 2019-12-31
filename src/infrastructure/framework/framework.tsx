@@ -1,35 +1,35 @@
-import React from 'react'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd'
-import { Link, withRouter } from 'react-router-dom'
-import sideListConfig, { breadcrumbNameMap } from '../../conf/sideListConf'
+import React from 'react';
+import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Link, withRouter } from 'react-router-dom';
+import sideListConfig, { breadcrumbNameMap } from '../../conf/sideListConf';
 
 interface Iprops {
-	location: Location
-	children: any
+	location: Location;
+	children: any;
 }
 class Framework extends React.Component<Iprops, {}> {
 	getBreadcrumbItem() {
-		const { location } = this.props
-		const pathSnippets = location.pathname.split('/').filter((i) => i)
+		const { location } = this.props;
+		const pathSnippets = location.pathname.split('/').filter((i) => i);
 		const extraBreadcrumbItems = pathSnippets.map((_, index) => {
-			const url = `/${pathSnippets.slice(0, index + 1).join('/')}`
+			const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
 			return (
 				<Breadcrumb.Item key={url}>
 					<Link to={url}>{breadcrumbNameMap[url]}</Link>
 				</Breadcrumb.Item>
-			)
-		})
+			);
+		});
 		return [
 			<Breadcrumb.Item key="home">
 				<Link to="/">home</Link>
 			</Breadcrumb.Item>
-		].concat(extraBreadcrumbItems)
+		].concat(extraBreadcrumbItems);
 	}
 
 	render() {
-		const { Header, Sider, Content } = Layout
-		const { SubMenu } = Menu
-		const { children } = this.props
+		const { Header, Sider, Content } = Layout;
+		const { SubMenu } = Menu;
+		const { children } = this.props;
 		return (
 			<Layout>
 				<Header className="header">
@@ -81,7 +81,7 @@ class Framework extends React.Component<Iprops, {}> {
 					</Layout>
 				</Layout>
 			</Layout>
-		)
+		);
 	}
 }
-export default withRouter(Framework as any)
+export default withRouter(Framework as any);

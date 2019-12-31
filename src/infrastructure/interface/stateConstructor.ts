@@ -1,5 +1,5 @@
-import BaseState from '../states/base.state'
+import BaseState from '../states/base.state';
 
 export interface StateConstructor {
-	new (): BaseState
+	new (): BaseState;
 }

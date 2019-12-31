@@ -1,7 +1,7 @@
 const routeConfig: {
-	name: string
-	component: string
-	path: string
+	name: string;
+	component: string;
+	path: string;
 }[] = [
 	{
 		name: 'app',
@@ -23,5 +23,5 @@ const routeConfig: {
 		path: '/user',
 		component: 'User'
 	}
-]
-export default routeConfig
+];
+export default routeConfig;

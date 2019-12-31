@@ -1,9 +1,9 @@
-import httpClient, { HttpClient } from '../http/httpClient'
+import httpClient, { HttpClient } from '../http/httpClient';
 
 export default class BaseState {
-	public httpClient: HttpClient
+	public httpClient: HttpClient;
 
 	constructor() {
-		this.httpClient = httpClient
+		this.httpClient = httpClient;
 	}
 }
