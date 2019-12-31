@@ -1,5 +1,6 @@
-import BaseState from '../../../../../infrastructure/states/base.state'
 import { observable, action } from 'mobx'
+import BaseState from '../../../../../infrastructure/states/base.state'
+
 export default class Appstate extends BaseState {
 	@observable public testData: {
 		title: string
@@ -8,11 +9,14 @@ export default class Appstate extends BaseState {
 		title: '',
 		message: ''
 	}
+
 	public test: String
+
 	constructor() {
 		super()
 		this.test = 'hello react'
 	}
+
 	@action.bound
 	getData() {
 		this.httpClient

@@ -1,4 +1,5 @@
 import { ServiceConfg } from '../infrastructure/interface/commonInterface'
+
 const serviceConfg: ServiceConfg = {
 	home: {
 		method: 'get',

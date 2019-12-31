@@ -17,5 +17,27 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react", "@typescript-eslint"],
-	"rules": {}
+	"rules": {
+		"no-tabs": "off",
+		"no-mixed-spaces-and-tabs": "off",
+		"react/jsx-filename-extension": "off",
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"react/prefer-stateless-function": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".ts", ".tsx"]
+			}
+		}
+	}
 }
