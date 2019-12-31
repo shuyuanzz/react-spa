@@ -2,7 +2,6 @@
 ## 项目启动  `yarn start`
 ## 项目构建  `yarn build`
 ## 分析打包产物体积 `yarn analyze`
-
 # 技术选型 
  
 ## why spa not ssr
@@ -109,3 +108,6 @@
 相对于mobx Redux 社区 可扩展性 流行度 占优,适用于大型项目。如果考虑快速的、使用更少的模版代码,构建出一个简单中小型项目，mobx表现的更好。
 
 [参考文章](https://blog.logrocket.com/redux-vs-mobx/)redux-vs-mobx
+
+## 缓存
+### 使用 Cache-Control: max-age=31536000 用于 build/static 资源，而 Cache-Control: no-cache 用于其他所有内容。
