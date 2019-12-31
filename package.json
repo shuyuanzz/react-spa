@@ -8,14 +8,14 @@
 		"build": "react-app-rewired build",
 		"test": "react-app-rewired test",
 		"eject": "react-scripts eject",
-		"lint": "eslint src --fix --ext .ts --ext .tsx "
+		"lint:fix": "./node_modules/.bin/eslint --fix --ext .ts --ext tsx./src"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn lint"
+			"pre-commit": "yarn lint:fix"
 		}
 	},
 	"browserslist": {

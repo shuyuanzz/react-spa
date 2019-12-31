@@ -5,7 +5,7 @@ import { StateConstructor } from '../interface/stateConstructor'
 export default function mobxProvider(state: StateConstructor) {
 	const initialState = new state()
 	return (Comp: any): any => {
-		class StatusComp extends React.Component {
+		      class StatusComp extends React.Component {
 			    render() {
 				    return React.createElement(
 					Provider,
@@ -14,6 +14,6 @@ export default function mobxProvider(state: StateConstructor) {
 				)
 			}
 		}
-		return StatusComp
+		     return StatusComp
 	}
 }
