@@ -26,7 +26,7 @@
 
 ## why TypeScript
 
-[参考文章](https://juejin.im/post/5d19b0305188254e2e4e78e8):为什么要使用TypeScript
+[参考文章](https://juejin.im/post/5d19b0305188254e2e4e78e8)为什么要使用TypeScript
 
 ## 项目代码规范风格统一
 
@@ -108,4 +108,4 @@
 ### 总结
 相对于mobx Redux 社区 可扩展性 流行度 占优,适用于大型项目。如果考虑快速的、使用更少的模版代码,构建出一个简单中小型项目，mobx表现的更好。
 
-[参考文章:](https://blog.logrocket.com/redux-vs-mobx/):redux-vs-mobx
+[参考文章](https://blog.logrocket.com/redux-vs-mobx/)redux-vs-mobx
