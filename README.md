@@ -47,4 +47,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 `Create React App`是 FaceBook 的 React 团队官方出的一个构建 React 单页面应用的脚手架工具。它本身集成了 Webpack，并配置了一系列内置的 loader 和默认的 npm 的脚本，可以很轻松的实现零配置就可以快速开发 React 的应用。这样可以省去一些繁琐的配置流程，其最基础默认功能也基本满足我们的项目需求，也提供了许多扩展功能，可以根据具体需求去做一些引入。
 
+## why Eslint & Prettier
+
+对于Typescript项目的编码规范而言，主要有两种选择ESLint和TSLint。ESLint不仅能规范js代码，通过配置解析器，也能规范TS代码。此外由于性能问题，TypeScript 官方决定全面采用ESLint，甚至把仓库作为测试平台，而 ESLint 的 TypeScript 解析器也成为独立项目，专注解决双方兼容性问题。
+
 ## why react-router & mobx
