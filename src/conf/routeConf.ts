@@ -1,5 +1,5 @@
 import { RouteI } from '../infrastructure/interface/commonInterface';
-import Home from '../modules/home/home';
+import Home from '../modules/home/subpage1/home';
 
 const routeConfig: RouteI[] = [
 	{
