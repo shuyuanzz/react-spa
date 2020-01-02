@@ -20,17 +20,31 @@ export class HttpClient {
 			(res) => res,
 			(err) => {
 				message.error(err.message);
-			}
+			} //todo: 与后端约定后统一做错误处理
 		);
 		this.serviceConfig = serviceConf;
 	}
-
-	public fetch<T>(routeName: string, config?: any): AxiosPromise<T> {
-		const currentRoute = this.serviceConfig[routeName];
-		if (!currentRoute) throw new Error('Enter a wrong router name');
-		return this.http({
-			method: currentRoute.method,
-			url: currentRoute.url,
+	public Get<T>(url: string, config?: any): AxiosPromise<T> {
+		return this.http.get({
+			url: url,
+			...config
+		});
+	}
+	public Post<T>(url: string, config?: any): AxiosPromise<T> {
+		return this.http.post({
+			url: url,
+			...config
+		});
+	}
+	public Put<T>(url: string, config?: any): AxiosPromise<T> {
+		return this.http.put({
+			url: url,
+			...config
+		});
+	}
+	public Delete<T>(url: string, config?: any): AxiosPromise<T> {
+		return this.http.delete({
+			url: url,
 			...config
 		});
 	}
