@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { RouteI } from '../../infrastructure/interface/commonInterface';
 
 export default function Home() {
 	return (
