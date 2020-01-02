@@ -18,5 +18,8 @@ export const breadcrumbNameMap: {
 } = {
 	'/about': 'about',
 	'/home': 'home',
+	'/home/sub1': 'sub1',
+	'/home/sub2': 'sub2',
+	'/home/sub3': 'sub3',
 	'/user': 'user'
 };

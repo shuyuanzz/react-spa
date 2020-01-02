@@ -21,7 +21,9 @@ export function RouteWithSubRoutes(route: RouteI) {
 	return (
 		<Route
 			path={route.path}
-			render={(props) => <route.component routes={route.routes} {...props} />}
+			render={(props) => {
+				return <route.component routes={route.routes} {...props} />;
+			}}
 		/>
 	);
 }

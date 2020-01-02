@@ -20,8 +20,8 @@ class Framework extends React.Component<Iprops, {}> {
 			);
 		});
 		return [
-			<Breadcrumb.Item key="home">
-				<Link to="/">home</Link>
+			<Breadcrumb.Item key="app">
+				<Link to="/">app</Link>
 			</Breadcrumb.Item>
 		].concat(extraBreadcrumbItems);
 	}

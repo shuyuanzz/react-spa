@@ -3,22 +3,26 @@ import Home from '../modules/home/home';
 
 const routeConfig: RouteI[] = [
 	{
+		path: '/',
+		component: () => 'index',
+		exact: true
+	},
+	{
 		path: '/home',
 		component: Home,
-		routes: [
-			{
-				path: '/home/sub1',
-				component: () => 'sub2'
-			},
-			{
-				path: '/home/sub2',
-				component: () => 'sub2'
-			},
-			{
-				path: '/home/sub3',
-				component: () => 'sub3'
-			}
-		]
+		exact: true
+	},
+	{
+		path: '/home/sub1',
+		component: () => 'sub1'
+	},
+	{
+		path: '/home/sub2',
+		component: () => 'sub2'
+	},
+	{
+		path: '/home/sub3',
+		component: () => 'sub3'
 	},
 	{
 		path: '/about',
