@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import RouterComponent from './infrastructure/router/routerComponent';
+import { RouterComponent } from './infrastructure/router/routerComponent';
 import './assets/css/app.scss';
 
 ReactDOM.render(<RouterComponent />, document.getElementById('root'));

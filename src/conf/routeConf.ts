@@ -1,27 +1,32 @@
-const routeConfig: {
-	name: string;
-	component: string;
-	path: string;
-}[] = [
+import { IRoute } from '../infrastructure/interface/commonInterface';
+import Home from '../modules/home/home';
+
+const routeConfig: IRoute[] = [
 	{
-		name: 'app',
-		path: '/',
-		component: 'APP'
-	},
-	{
-		name: 'about',
-		path: '/about',
-		component: 'About'
-	},
-	{
-		name: 'home',
 		path: '/home',
-		component: 'Home'
+		component: Home,
+		routes: [
+			{
+				path: '/home/sub1',
+				component: () => 'sub2'
+			},
+			{
+				path: '/home/sub2',
+				component: () => 'sub2'
+			},
+			{
+				path: '/home/sub3',
+				component: () => 'sub3'
+			}
+		]
 	},
 	{
-		name: 'user',
+		path: '/about',
+		component: () => 'about'
+	},
+	{
 		path: '/user',
-		component: 'User'
+		component: () => 'user'
 	}
 ];
 export default routeConfig;

@@ -4,3 +4,8 @@ export interface ServiceConfg {
 		url: string;
 	};
 }
+export interface RouteI {
+	component: Function;
+	path: string;
+	routes?: RouteI[];
+}
