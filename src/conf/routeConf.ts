@@ -1,7 +1,7 @@
-import { IRoute } from '../infrastructure/interface/commonInterface';
+import { RouteI } from '../infrastructure/interface/commonInterface';
 import Home from '../modules/home/home';
 
-const routeConfig: IRoute[] = [
+const routeConfig: RouteI[] = [
 	{
 		path: '/home',
 		component: Home,
