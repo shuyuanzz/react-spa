@@ -23,3 +23,27 @@ export const breadcrumbNameMap: {
 	'/home/sub3': 'sub3',
 	'/user': 'user'
 };
+
+export const subMenuMap: {
+	[path: string]: {
+		defaultSelectedKeys: string;
+		defaultOpenKeys: string;
+	};
+} = {
+	default: {
+		defaultOpenKeys: 'mainList1',
+		defaultSelectedKeys: 'about'
+	},
+	about: {
+		defaultOpenKeys: 'mainList1',
+		defaultSelectedKeys: 'about'
+	},
+	home: {
+		defaultOpenKeys: 'mainList1',
+		defaultSelectedKeys: 'home'
+	},
+	user: {
+		defaultOpenKeys: 'mainList1',
+		defaultSelectedKeys: 'user'
+	}
+};

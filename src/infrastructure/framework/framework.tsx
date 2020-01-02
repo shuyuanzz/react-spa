@@ -1,7 +1,10 @@
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
-import sideListConfig, { breadcrumbNameMap } from '../../conf/sideListConf';
+import sideListConfig, {
+	breadcrumbNameMap,
+	subMenuMap
+} from '../../conf/sideListConf';
 
 interface Iprops {
 	location: Location;
@@ -29,7 +32,9 @@ class Framework extends React.Component<Iprops, {}> {
 	render() {
 		const { Header, Sider, Content } = Layout;
 		const { SubMenu } = Menu;
-		const { children } = this.props;
+		const { children, location } = this.props;
+		const activeTag =
+			location.pathname.split('/').filter((i) => i)[0] || 'default';
 		return (
 			<Layout>
 				<Header className="header">
@@ -41,8 +46,8 @@ class Framework extends React.Component<Iprops, {}> {
 					<Sider width={200} style={{ background: '#fff' }}>
 						<Menu
 							mode="inline"
-							defaultSelectedKeys={['1']}
-							defaultOpenKeys={['sub1']}
+							defaultOpenKeys={[subMenuMap[activeTag].defaultOpenKeys]}
+							defaultSelectedKeys={[subMenuMap[activeTag].defaultSelectedKeys]}
 							style={{ height: '100%', borderRight: 0 }}
 						>
 							{sideListConfig.map((mainList) => (
