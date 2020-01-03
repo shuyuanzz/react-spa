@@ -6,7 +6,8 @@
 		"plugin:prettier/recommended"
 	], 
 	"plugins": [
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"react-hooks"
 	],
 	"settings": {             //自动发现React的版本，从而进行规范react代码
         "react": {
@@ -24,5 +25,9 @@
 	"env": {
 		"browser": true,
 		"es6": true
-	}
+	},
+	"rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
+	  }
 }
