@@ -1,10 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { Link } from 'react-router-dom';
-
+const initialState = { count: 0 };
+function reducer(state: { count: number }, action: string) {
+	switch (action) {
+		case 'increment':
+			return {
+				count: state.count + 1
+			};
+		case 'decrement':
+			return {
+				count: state.count - 1
+			};
+		case 'reset':
+			return {
+				count: 0
+			};
+		default:
+			throw new Error('action type error');
+	}
+}
 export default function Home(): JSX.Element {
-	const [count, setCount] = useState(0);
+	const [state, dispath] = useReducer(reducer, initialState);
 	useEffect(() => {
-		document.title = `you clicked ${count} times`;
+		document.title = `you clicked ${state.count} times`;
 	});
 	return (
 		<>
@@ -21,7 +39,9 @@ export default function Home(): JSX.Element {
 					</li>
 				</ul>
 			</div>
-			<button onClick={() => setCount(count + 1)}>{count}</button>
+			<button onClick={() => dispath('reset')}>Reset</button>
+			<button onClick={() => dispath('increment')}>+</button>
+			<button onClick={() => dispath('decrement')}>-</button>
 		</>
 	);
 }
