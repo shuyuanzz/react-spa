@@ -6,7 +6,7 @@ import { BASE_URL, TIME_OUT } from '../../conf/restServiceConf';
 export class HttpClient {
 	public http: AxiosInstance;
 
-	constructor(serviceConf: ServiceConfg) {
+	constructor() {
 		this.http = Axios.create({
 			baseURL: BASE_URL,
 			timeout: TIME_OUT,
@@ -46,4 +46,4 @@ export class HttpClient {
 		});
 	}
 }
-export default new HttpClient(serviceConfg);
+export default new HttpClient();
