@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { StoreContext } from '../store/home.store';
 import { Skeleton } from 'antd';
-
+import styles from '../style/home.module.scss';
 export default function Home(): JSX.Element {
 	const { state, dispatch } = useContext(StoreContext);
 	useEffect(() => {
@@ -11,5 +11,5 @@ export default function Home(): JSX.Element {
 	});
 	if (state.isLoading) return <Skeleton active />;
 	if (!state.data) return null;
-	return <h1>{state.data.title}</h1>;
+	return <h1 className={styles.title}>{state.data.title}</h1>;
 }
