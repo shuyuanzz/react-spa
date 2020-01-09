@@ -24,6 +24,8 @@
 `Create React App`是 FaceBook 的 React 团队官方出的一个构建 React 单页面应用的脚手架工具。它本身集成了 Webpack，并配置了一系列内置的 loader 和默认的 npm 的脚本，可以很轻松的实现零配置就可以快速开发 React 的应用。这样可以省去一些繁琐的配置流程，其最基础默认功能也基本满足我们的项目需求，也提供了许多扩展功能，可以根据具体需求去做一些引入。
 
 ## why TypeScript
+### JS 动态类型弱类型语言
+### TS 静态类型强类型语言 可以帮助我门在开发阶段规避很多错误 习惯之后可带来一定的便利性
 
 [参考文章](https://juejin.im/post/5d19b0305188254e2e4e78e8)为什么要使用TypeScript
 
@@ -79,5 +81,8 @@
 ## why hooks
 [参考文章](https://zh-hans.reactjs.org/docs/hooks-intro.html)
 
+## 如何使用react-hooks 获取数据 
+[参考文章]https://www.robinwieruch.de/react-hooks-fetch-data
+
 ## 缓存
-### 使用 Cache-Control: max-age=31536000 用于 build/static 资源，而 Cache-Control: no-cache 用于其他所有内容。
+### 使用 Cache-Control: max-age=31536000 用于 build/static 资源（每次打包后如果资源内部有改变文件名的hash值会变化这样浏览器可直接使用最新的静态资源），而 Cache-Control: no-cache 用于其他所有内容。
