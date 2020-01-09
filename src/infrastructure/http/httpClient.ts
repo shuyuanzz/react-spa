@@ -1,6 +1,5 @@
 import Axios, { AxiosInstance, AxiosPromise } from 'axios';
 import { message } from 'antd';
-import { ServiceConfg } from '../../infrastructure/interface/commonInterface';
 import { BASE_URL, TIME_OUT } from '../../conf/restServiceConf';
 
 export class HttpClient {
