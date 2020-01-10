@@ -1,3 +1,17 @@
-.title {
-    color: red;
+$highlight-color:#f90;
+$basic-border: 1px solid $highlight-color;
+body {
+    background-color: $highlight-color;
+    .title , p{
+        color: $highlight-color;
+        &:hover {
+            color: red;
+        }
+    }
+    p {
+        border: $basic-border {
+            left: 0px;
+            right: 0px;
+        }; 
+    }
 }

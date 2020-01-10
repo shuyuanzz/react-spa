@@ -124,4 +124,7 @@ Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情�
 
 [React-Hooks简介](https://zh-hans.reactjs.org/docs/hooks-intro.html)  
  
-[使用React-Hooks获取数据](https://www.robinwieruch.de/react-hooks-fetch-data)  
+[使用React-Hooks获取数据](https://www.robinwieruch.de/react-hooks-fetch-data) 
+
+## Sass规范
+在app.Scss定义基础变量 其它文件导入使用
